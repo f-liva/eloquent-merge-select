@@ -48,6 +48,7 @@ class EloquentMergeSelectServiceProvider extends PackageServiceProvider
             // If no columns are defined → default to "*" plus the new ones
             if (empty($this->columns)) {
                 $this->columns = array_merge(['*'], $columns);
+
                 return $this;
             }
 

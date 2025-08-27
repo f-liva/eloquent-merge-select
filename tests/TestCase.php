@@ -16,7 +16,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn($name) => 'Fliva\\EloquentMergeSelect\\Database\\Factories\\' . class_basename($name) . 'Factory'
+            fn ($name) => 'Fliva\\EloquentMergeSelect\\Database\\Factories\\'.class_basename($name).'Factory'
         );
     }
 
