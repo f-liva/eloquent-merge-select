@@ -1,0 +1,20 @@
+name: eloquent-merge-select
+
+services:
+  php:
+    type: php:8.1
+
+tooling:
+  composer:
+    service: php
+    description: Run Composer commands
+
+  pest:
+    service: php
+    description: Run Pest tests
+    cmd: vendor/bin/pest
+
+  phpstan:
+    service: php
+    description: Run PHPStan static analysis
+    cmd: vendor/bin/phpstan analyse

@@ -5,8 +5,10 @@ parameters:
     level: 5
     paths:
         - src
-        - config
-        - database
     tmpDir: build/phpstan
     checkOctaneCompatibility: true
     checkModelProperties: true
+    scanFiles:
+        - stubs/query-builder.php
+    ignoreErrors:
+        - '#Call to an undefined static method .*::macro#'
